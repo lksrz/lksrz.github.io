@@ -1,0 +1,44 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+  }
+  .grid > div {
+    background: black;
+    padding: 1rem;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  .grid > div::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  .grid > div img {
+    position: absolute;
+    max-width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .grid > div p {
+    position: absolute;
+    max-width: 100%;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  body {
+    margin: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+  }
+  h2 {color: black;}
+  .ok {
+    background: green !important;
+  }
+  .err {
+    background: red !important;
+  }
