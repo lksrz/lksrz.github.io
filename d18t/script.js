@@ -1,3 +1,4 @@
+adr = 'http://dom.rzepecki.net:5980/listener'
 function clear(){
 	document.querySelector('#b1').classList.remove('ok');
 	document.querySelector('#b1').classList.remove('err');
@@ -12,7 +13,7 @@ function clear(){
 }
 document.querySelector('#b1').addEventListener('dblclick', () => {
     httpRequest1 = new XMLHttpRequest()
-    httpRequest1.open('POST', ']]..adr..[[?openGate=property')
+    httpRequest1.open('POST', adr+'?openGate=property')
     httpRequest1.onreadystatechange = function(){
         if (httpRequest1.readyState === XMLHttpRequest.DONE) {
             if (httpRequest1.status === 200) {
@@ -27,7 +28,7 @@ document.querySelector('#b1').addEventListener('dblclick', () => {
 });
 document.querySelector('#b2').addEventListener('dblclick', () => {
     httpRequest2 = new XMLHttpRequest()
-    httpRequest2.open('POST', ']]..adr..[[?openGate=gateway')
+    httpRequest2.open('POST', adr+'?openGate=gateway')
     httpRequest2.onreadystatechange = function(){
         if (httpRequest2.readyState === XMLHttpRequest.DONE) {
             if (httpRequest2.status === 200) {
@@ -42,7 +43,7 @@ document.querySelector('#b2').addEventListener('dblclick', () => {
 });
 document.querySelector('#b3').addEventListener('dblclick', () => {
     httpRequest3 = new XMLHttpRequest()
-    httpRequest3.open('POST', ']]..adr..[[?openGate=door')
+    httpRequest3.open('POST', adr+'?openGate=door')
     httpRequest3.onreadystatechange = function(){
         if (httpRequest3.readyState === XMLHttpRequest.DONE) {
             if (httpRequest3.status === 200) {
@@ -57,7 +58,7 @@ document.querySelector('#b3').addEventListener('dblclick', () => {
 });
 document.querySelector('#b4').addEventListener('dblclick', () => {
     httpRequest4 = new XMLHttpRequest()
-    httpRequest4.open('POST', ']]..adr..[[?openGate=garage')
+    httpRequest4.open('POST', adr+'?openGate=garage')
     httpRequest4.onreadystatechange = function(){
         if (httpRequest4.readyState === XMLHttpRequest.DONE) {
             if (httpRequest4.status === 200) {
@@ -72,7 +73,7 @@ document.querySelector('#b4').addEventListener('dblclick', () => {
 }); 
 document.querySelector('#b5').addEventListener('dblclick', () => {
     httpRequest5 = new XMLHttpRequest()
-    httpRequest5.open('POST', ']]..adr..[[?openGate=estate')
+    httpRequest5.open('POST', adr+'?openGate=estate')
     httpRequest5.onreadystatechange = function(){
         if (httpRequest5.readyState === XMLHttpRequest.DONE) {
             if (httpRequest5.status === 200) {
